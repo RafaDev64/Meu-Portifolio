@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Código de Barras - RafaDev Systems</title>
+    <link rel="stylesheet" href="assets/css/geradorCodebar.css">
+    <link rel="stylesheet" href="assets/js/geradorCodeBar.js">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <!-- Logo -->
+            <a href="index.html" class="logo">
+                <img src="assets/image/RafaDev_logo_1_free-file.jpg" alt="Logo da RafaDev Systems" id="logo" loading="lazy">
+            </a>
+            <!-- Ícone do menu hambúrguer -->
+            <div class="hamburger" onclick="toggleMenu()" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!-- Lista de links do menu -->
+            <ul id="topMenu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="sobreMim.html">Sobre Mim</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Gerador de Código de Barras</h1>
+        <section class="barcode-container">
+            <form id="barcodeForm">
+                <label for="barcodeInput">Digite os números:</label>
+                <input type="text" id="barcodeInput" placeholder="Ex.: 123456789" required>
+                <button type="submit" class="button">Gerar Código</button>
+            </form>
+            <div id="barcodeResult" class="barcode-display">
+                <canvas id="barcodeCanvas"></canvas>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2025 Rafael - Todos os direitos reservados</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.5/dist/JsBarcode.all.min.js"></script>
+    <script src="assets/js/geradorCodeBar.js"></script>
+</body>
+</html>
